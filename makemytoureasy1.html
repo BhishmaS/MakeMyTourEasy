@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MakeMyTourEasy</title>
+		<style>
+			.logo{
+				color:white;	
+				font-family: sans-serif;
+				padding-top: 4px;
+  				padding-bottom:1px;
+  				padding-left: 40px;
+				 text-shadow: 3px 2px blue;
+			}
+			.padd{
+				font:bold 20px Sans-serif;
+				color:#0066ff;
+				padding-top: 30px;
+			}
+			.padd1{
+				padding-top:2px;
+				padding-left:80px;
+				padding-bottom:4px;
+			}
+			.padd2{
+				color:#ff5722;	
+				padding-top:2px;
+				padding-left:80px;
+				padding-bottom:4px;
+			}
+			.padd3{
+				width:100%;
+					padding: 8px 8px;
+			}
+			.submit1 {
+					width: 100%;
+					background-color: #0099ff;
+					color: white;
+					padding: 14px 20px;
+					margin: 8px 0;
+					border: none;
+					border-radius: 4px;
+					cursor: pointer;
+				}
+			input[type=submit]:hover {
+					background-color: #0066ff;
+					}
+			body
+			{
+    				    background-color:#e6ffff;
+			}
+		</style>	
+		<script type="text/javascript">
+			var i1=new Image();
+			i1.src="1.jpg";
+			var i2=new Image();
+			i2.src="2.jpg";
+			var i3=new Image();
+			i3.src="3.jpg";
+			var i4=new Image();
+			i4.src="4.jpg";
+			var i5=new Image();
+			i5.src="5.jpg";
+		</script>
+		<link rel="stylesheet" href="w3s.css">
+	</head>
+	<body>
+		<div class="w3-container w3-blue">
+		<div class="w3-row-padding">
+		<div class="w3-half">
+			<h1 class=logo><a href="makemytoureasy.html" style="text-decoration:none"><i>MakeMyTourEasy</i></a></h1>
+		</div>
+		</div>
+		</div>
+	<div class="w3-row-padding">
+  	 <div class="w3-half">
+		<div class="padd">
+		<form name="tour" action="result1.php" method="post">
+			<div class="padd1">
+			<table width=100%>
+				<tr>
+					<td colspan=2>Tourist:<input class="padd3" type="text" name="tname" placeholder="Enter your name"/></td>
+				</tr>
+				<tr></tr><tr></tr>
+				<tr>
+					<td colspan=2>Select Country:<select class="padd3" name="country">
+									<option>India</option>
+									</select>
+					</td>
+				</tr>
+				<tr></tr><tr></tr>
+				<tr>
+					<td colspan=2>Tour between states/within a state<select class="padd3" onchange=tourc(this.value) name="tourh">
+									<option value="makemytoureasy1.html">With in a state</option>
+									<option value="makemytoureasy.html">Between states</option>
+									</select>
+					</td>
+				</tr>
+				<tr></tr><tr></tr>
+				<tr>
+					<td colspan=2>Select State:<select class="padd3" name="state">
+									<option>Andhra Pradesh</option>
+									</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2>Select your current location:
+								<select class="padd3" name="location">
+									<option>Anantapur</option>
+									<option>Chittoor</option>
+									<option>East Godavari</option>
+									<option>Guntur</option>
+									<option>Visakhapatnam</option>
+									<option>Krishna</option>
+									<option>West Godavari</option>
+									<option>Nellore</option>
+									<option>Prakasam</option>
+									<option>Srikakulam</option>
+									<option>Kurnool</option>
+									<option>Vizianagaram</option>
+									<option>Kadapa</option>
+								</select>			
+					</td>
+				</tr>
+				<tr></tr><tr></tr>
+				<tr>
+					<td><u>Select the regions you want to travel:</u><br/><br/>
+						<input type="checkbox" name="0"/>Anantapur<br/>
+						<input type="checkbox" name="1"/>Chittoor<br/>
+						<input type="checkbox" name="2"/>East Godavari<br/>
+						<input type="checkbox" name="3"/>Guntur<br/>
+						<input type="checkbox" name="4"/>Visakhapatnam<br/>
+						<input type="checkbox" name="5"/>Krishna<br/>
+						<input type="checkbox" name="6"/>West Godavari<br/>
+					</td>
+					<td>
+						<input type="checkbox" name="7"/>Nellore<br/>
+						<input type="checkbox" name="8"/>Prakasam<br/>
+						<input type="checkbox" name="9"/>Srikakulam<br/>
+						<input type="checkbox" name="10"/>Kurnool<br/>
+						<input type="checkbox" name="11"/>Vizianagaram<br/>
+						<input type="checkbox" name="12"/>Kadapa<br/>
+					</td>
+				</tr>
+				<tr></tr><tr></tr>
+				<tr>
+					<td colspan=2>
+						<input class="submit1" type="submit" value="Find Easy Route"/>
+					</td>
+				</tr>
+			</table>
+			<script>
+				function tourc(src)
+				{
+					window.location=src;
+				}
+			</script>
+			</div>
+		</form>
+		</div>
+	 </div>
+	 <div class="w3-half">	
+		<div class=padd2>
+			<br/>	
+			<img src="1.jpg" name="slide" height="470" width="520" />
+			<script>
+				var i=1;
+				function play()
+				{
+					document.images.slide.src=eval("i"+i+".src");
+					if(i<5)
+						i++;
+					else
+						i=1;
+					setTimeout("play()",3000);
+				}
+				play();
+			</script>
+		</div>
+	 </div>
+	</div>
+	</body>
+</html>
+	
